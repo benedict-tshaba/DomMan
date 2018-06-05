@@ -1,6 +1,20 @@
+/*
+*  DomMan is a simple, minimal and very lightweight JavaScript DOM 
+*  manipulation library designed to be fast and easily adaptable.
+*  
+*  Author: Tshaba Phomolo Benedict
+*  License: TPB - (Once I am confident enough that the code is
+*                  perfect I will change this to GPLv3.0 or something)
+*/
+
 var DomManipulate = function($=document) {
-	/*If a function does not return anything (has no content
-	to return, then return null.)*/
+	/* If a function does not return anything (has no content
+	to return, then return null.)
+	*  Also some methods are not available for an array of 
+	*  elements e.g. attr methods, so in the case that multiple
+	*  elements have been selected such methods will only work
+	*  on the first element in the array. 
+	*/
 	fn = function(el) {
 		var elm = el; //this should be an array
 
