@@ -90,7 +90,7 @@ var DomManipulate = function($=document) {
 
 			on: function(type, fn, config) {
 
-				if(typeof config === 'object') {
+				if(config !== undefined) {
 					elm.forEach(el => {
 						el.addEventListener(type, fn, config);
 					});
