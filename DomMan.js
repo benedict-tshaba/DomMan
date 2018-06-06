@@ -100,19 +100,23 @@ var DomManipulate = function($=document) {
 		};
 	};
 
-	return function get(el) {
-		this.elements = null; //clear this.elements with every call
+	document.addEventListener("DOMContentLoaded", function() { //return when content has been loaded
+		return function get(el) {
+			this.elements = null; //clear this.elements with every call
 
-		if (!el) {
-			return null;
-		}
+			if (!el) {
+				return null;
+			}
 
-		//the result of this is not live - less perfomant
-		this.elements = $.querySelectorAll(el);
-		//next time use something like:
-		//getElementsByTagName, etc...
-		this.elements = Array.from(this.elements);
+			//the result of this is not live - less perfomant
+			this.elements = $.querySelectorAll(el);
+			//next time use something like:
+			//getElementsByTagName, etc...
+			this.elements = Array.from(this.elements);
 
-		return fn(this.elements);
-	}; 
+			if($.readyState === "complete") {
+				return fn(this.elements); //only when the dom is ready
+			}
+		};
+	};
 };
