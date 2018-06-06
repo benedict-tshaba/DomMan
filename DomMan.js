@@ -124,5 +124,5 @@ var DomManipulate = function($=document) {
 				return fn(this.elements); //only when the dom is ready
 			}
 		};
-	};
+	}, false);
 };
