@@ -106,7 +106,7 @@ var DomManipulate = function($=document) {
 		};
 	};
 
-	document.addEventListener("DOMContentLoaded", function() { //return when content has been loaded
+	if($.readyState === "complete") {
 		return function get(el) {
 			this.elements = null; //clear this.elements with every call
 
@@ -120,9 +120,7 @@ var DomManipulate = function($=document) {
 			//getElementsByTagName, etc...
 			this.elements = Array.from(this.elements);
 
-			if($.readyState === "complete") {
-				return fn(this.elements); //only when the dom is ready
-			}
+			return fn(this.elements); //only when the dom is ready
 		};
-	}, false);
+	};
 };
