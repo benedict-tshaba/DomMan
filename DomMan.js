@@ -19,6 +19,7 @@ var DomManipulate = function($=document) {
 		var elm = el; //this should be an array
 
 		return {
+			element: elm[0],
 
 			attr: function(attr, newSet) {
 				if(attr) {
