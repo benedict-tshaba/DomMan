@@ -20,8 +20,14 @@ var DomManipulate = function($=document) {
 
 		return {
 
-			attr: function(attr) {
-				return elm[0].getAttribute(attr);
+			attr: function(attr, newSet) {
+				if(attr) {
+					return elm[0].getAttribute(attr);
+				} else if(attr && newSet) {
+					elm[0].setAttribute(attr, newSet);
+				} else {
+					return null;
+				}
 			},
 
 			text: function(text) {
@@ -43,7 +49,7 @@ var DomManipulate = function($=document) {
 			click: function(fn) {
 
 				if(typeof fn !== 'function') {
-					return;
+					return null;
 				}
 				elm.forEach(el => el.onclick = fn);
 				return null;
