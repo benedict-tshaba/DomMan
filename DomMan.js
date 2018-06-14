@@ -22,7 +22,7 @@ var DomManipulate = function($=document) {
 			element: elm[0],
 
 			attr: function(attr, newSet) {
-				if(attr) {
+				if(attr && !newSet) {
 					return elm[0].getAttribute(attr);
 				} else if(attr && newSet) {
 					elm[0].setAttribute(attr, newSet);
