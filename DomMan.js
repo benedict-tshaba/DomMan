@@ -66,7 +66,7 @@ var DomManipulate = function($=document) {
 
 			val: function(value) {
 				
-				if(!value) {
+				if(value) {
 					elm.forEach(el => el.value = null);
 				} else {
 					return elm[0].value;
