@@ -1,0 +1,24 @@
+{
+  "name": "domman",
+  "version": "0.0.1",
+  "description": "DomMan is a very light weight JavaScript DOM manipulation library. I wrote this code as a way to learn how jQuery works and as a way to understand vanilla JavaScript a lot better.",
+  "main": "DomMan-test.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch *.js"
+  },
+  "author": "Tshaba Phomolo Benedict",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benedict-tshaba/DomMan.git"
+  },
+  "keywords": [
+    "Dom",
+    "Manipulation"
+  ],
+  "bugs": {
+    "url": "https://github.com/benedict-tshaba/DomMan/issues"
+  },
+  "homepage": "https://github.com/benedict-tshaba/DomMan#readme"
+}
