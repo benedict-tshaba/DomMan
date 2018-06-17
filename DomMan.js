@@ -67,7 +67,7 @@ var DomManipulate = function($=document) {
 			val: function(value) {
 				
 				if(value) {
-					elm.forEach(el => el.value = null);
+					elm.forEach(el => el.value = value);
 				} else {
 					return elm[0].value;
 				}
@@ -124,3 +124,5 @@ var DomManipulate = function($=document) {
 		return fn(this.elements); //only when the dom is ready
 	};
 };
+
+module.exports = DomManipulate();
