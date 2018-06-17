@@ -90,7 +90,7 @@ it('adds css styling to an element', () => {
     document.body.innerHTML = "<div id='my-elm'></div>";
     
     let elm = $('#my-elm');
-    elm.css('color:red');
+    elm.css('{color:#fff}');
     
     expect(elm.element.style.color).toBe('red');
 });
